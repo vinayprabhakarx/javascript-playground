@@ -231,6 +231,28 @@ Checks if a value is an array.
 console.log(Array.isArray(fruits));
 console.log(Array.isArray("hello"));
 
+// Array.from()
+
+/*
+Creates an array from array-like or iterable objects.
+*/
+console.log(Array.from("hello")); // Converts string to array of characters
+console.log(Array.from([1, 2, 3], (x) => x * 2)); // Maps while converting
+console.log(Array.from({ name: "vinay" })); // Converts object to array of values, but gives empty array as object has no indexed properties
+console.log(Array.from({ length: 3 }, (_, i) => i + 1)); // Creates array [1, 2, 3]
+
+// Array.of()
+
+/*
+Creates an array from a variable number of arguments.
+*/
+let val1 = 10;
+let val2 = 20;
+let val3 = 30;
+
+const arrayOfValues = Array.of(val1, val2, val3);
+console.log(arrayOfValues);
+
 // -----------------------------
 // ES6 Features
 // -----------------------------
